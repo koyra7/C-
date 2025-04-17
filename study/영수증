@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	
+	int a, b;
+	int x; // 입력 총 값
+	int t = 0; // 반복 횟수
+	int sum = 0; // 계산 값
+
+	cin >> x >> t; // 입력 값, 반복 횟수 입력
+
+	for (int i = 0; i < t; i++) {
+		cin >> a >> b;
+		sum += a * b;
+	}
+
+	if (sum == x) {
+		cout << "Yes";
+	}
+	else if (sum != x) {
+		cout << "No";
+	}
+
+	return 0;
+}
