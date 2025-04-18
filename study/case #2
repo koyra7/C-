@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	
+	int t;
+	cin >> t;
+	vector<int> arr,a(t),b(t);
+
+	for (int i = 0; i < t; i++) {
+		cin >> a[i] >> b[i];
+		arr.push_back(a[i] + b[i]);
+
+	}
+	for (int i = 0; i < t; i++) {
+		cout << "Case #" << i+1 << ": "
+			<< a[i] << " + " << b[i] << " = " << arr[i]<<"\n";
+	}
+
+
+
+	return 0;
+}
