@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+	int count,A;
+	cin >> count;
+	
+	vector<int> arr;
+
+	for (int i = 0; i < count; i++) {
+		cin >> A;
+		arr.push_back(A);
+	}
+
+	int max= arr[0];
+	int min= arr[0];
+
+	for (int i = 0; i < arr.size(); i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+		else if (arr[i] < min) {
+			min = arr[i];
+		}
+	}
+	
+	
+	cout << min << " " << max;
+
+	return 0;
+}

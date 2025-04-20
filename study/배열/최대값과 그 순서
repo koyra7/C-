@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+	int a;
+	vector<int> arr;
+	
+	
+	while (cin >> a) {
+		arr.push_back(a);
+	}
+
+	int max = arr[0];
+	int order = 0;
+
+	for (int i = 0; i < arr.size(); i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+			order = i+1;
+		}
+		
+	}
+
+	cout << max << '\n' << order;
+
+	return 0;
+}
+// 백준 2562문제 9번째로 한정된것 업글
