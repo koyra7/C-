@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+	int max, line;
+	cin >> max >> line;
+
+	vector<int> arr(max, 0);
+	int a, b, c;
+
+
+	for (int i = 0; i < line; i++) {
+		cin >> a >> b >> c;
+		for (int j = a - 1; j <= b - 1; j++) {
+			arr[j] = c;
+		}
+	}
+
+	for (int i = 0; i < max; i++) {
+		cout << arr[i] << " ";
+	}
+
+	return 0;
+}
