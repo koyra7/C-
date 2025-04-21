@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+
+	int A;
+	cin >> A;
+
+	vector<string> arr;
+
+	for (int i = 0; i < A; i++) {
+		string m;
+		cin >> m;
+
+		string first_last;
+		first_last += m[0];
+		first_last += m[m.length()-1];
+
+		arr.push_back(first_last);
+	}
+	
+	for (int i = 0; i < A; i++) {
+		cout << arr[i] << '\n';
+	}
+
+	return 0;
+}	

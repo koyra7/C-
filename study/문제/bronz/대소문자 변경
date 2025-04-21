@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+using namespace std;
+
+int main() {
+	
+	
+	string str;
+	cin >> str; // WrongAnswer 입력
+	
+	for (char& ch : str) {
+		if (isupper(ch)) {
+			ch=tolower(ch);
+		}
+		else if (islower(ch)) {
+			ch=toupper(ch);
+			}
+	}
+
+	cout << str;
+
+	return 0;
+}

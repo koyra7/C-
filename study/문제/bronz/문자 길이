@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+	string pull;
+	cin >> pull;
+
+	cout << pull.size();
+
+
+	return 0;
+}	
