@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+
+using namespace std;
+
+int main() {
+
+	int l;
+	cin >> l;
+
+	vector<string> values;
+
+	for (int i = 0; i < l; i++) {
+		int t;
+		string std, value ="";
+		cin >> t >> std;
+
+
+		for (char c : std) {
+			value += string(t, c);
+		}
+		values.push_back(value);
+
+	}
+
+	for (int i = 0; i < values.size(); i++) {
+		cout << values[i] << '\n';
+	}
+
+	return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	char Spelling;
+
+	cin >> Spelling;
+
+	int Ascii = (int)Spelling;
+
+	cout << Ascii;
+	
+	return 0;
+}
