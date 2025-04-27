@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+
+	string str;
+	getline(cin, str); // 한줄 전체 입력받음
+
+	vector<string> words;
+	stringstream sstr(str); // 문자열 스트림 생성
+
+	string word;
+	while (sstr >> word) { // 문자열 나눠 배열에 저장 
+		words.push_back(word);
+	}
+
+	cout << words.size(); // 저장된 갯수 출력
+	
+
+	return 0;
+}

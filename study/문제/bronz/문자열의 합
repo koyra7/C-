@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+
+	int T;
+	string N;
+	cin >> T >> N;
+
+	int sum = 0;
+	for (char ch : N) {
+		sum += ch - '0';
+	}
+	
+	cout << sum;
+
+	return 0;
+}
