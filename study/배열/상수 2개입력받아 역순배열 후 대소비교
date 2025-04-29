@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+
+	string Num1, Num2;
+	cin >> Num1 >> Num2;
+
+	reverse(Num1.begin(), Num1.end());
+	reverse(Num2.begin(), Num2.end());
+
+	int n1 = stoi(Num1);
+	int n2 = stoi(Num2);
+
+	if (Num1 > Num2) 
+		cout << Num1;
+	else
+		cout << Num2;
+
+	return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+
+using namespace std;
+
+int main() {
+
+	int N, M;
+	cin >> N;
+
+	vector<int> Point(N);
+
+	for (int i = 0; i < N; ++i)
+		cin >> Point[i]; // 숫자 입력
+	
+	auto max = *max_element(Point.begin(), Point.end()); // 제일 큰수 뽑아냄
+
+	vector<double> NewPoint(N);
+	for (int i = 0; i < N; ++i)
+		NewPoint[i] = (Point[i] / (double)max) * 100; // 각 점수 조작
+
+	double sum = 0;
+	for (int i = 0; i < N; ++i)
+		sum += NewPoint[i];
+	cout << sum/N;
+
+	return 0;
+}
