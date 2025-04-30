@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
+
+using namespace std;
+
+int main() {
+
+	string input;
+	cin >> input;
+
+	unordered_map<char, int> frequency;
+
+	for (char ch : input) {
+		if (ch !=' ')
+			frequency[ch]++;
+	}
+
+	char most_frequency = '\0'; // 널값으로 초기화
+	int most_count = 0;
+
+	for (const auto& pair : frequency) {
+		if (pair.second > most_count) {
+			most_count = pair.second;
+			most_frequency = pair.first;
+		}
+	}
+
+	cout << most_frequency;
+
+	return 0;
+}

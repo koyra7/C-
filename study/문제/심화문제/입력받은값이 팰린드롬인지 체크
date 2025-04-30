@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+
+	string word;
+	cin >> word;
+
+	string palindrome;
+	palindrome = word; // 입력받은거 저장
+
+	// 저장해둔것을 뒤집음 
+	reverse(palindrome.begin(), palindrome.end());
+
+	// 대조
+	if (word == palindrome)
+		cout << '1';
+	else
+		cout << '0';
+
+	return 0;
+}
