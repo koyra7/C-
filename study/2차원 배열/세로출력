@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+	char arr[5][15];
+
+	// null값 초기화
+	for (int i = 0; i < 5; ++i) {
+		for (int j = 0; j < 15; ++j) {
+			arr[i][j] = '\0';
+		}
+	}
+
+	//배열에 문자 저장
+	for (int i = 0; i < 5; ++i) {
+		string temp;
+		cin >> temp;
+		for (int j = 0; j < temp.size(); ++j) {
+			arr[i][j] = temp[j];
+		}
+	}
+
+	for (int j = 0; j < 15; ++j) {
+		for (int i = 0; i < 5; ++i) {
+			if (arr[i][j] != '\0')
+				cout << arr[i][j];
+		}
+	}
+
+
+	return 0;
+}
